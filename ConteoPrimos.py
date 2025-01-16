@@ -4,8 +4,8 @@ y generando la lista o conjuntos de los elementos correspondientes para el calcu
 de todos los numeros primos menores que 100 usando algunas listas o conjuntos que uso el calculo anterior
 """
 
-#Criba de eratóstenes: 
-#principio de inclusión-exclusión con el fin de encontrar el numero de primos menor o igual a un numero n
+#Criba de eratÃ³stenes: 
+#principio de inclusiÃ³n-exclusiÃ³n con el fin de encontrar el numero de primos menor o igual a un numero n
 
 n = 100
 
@@ -18,5 +18,5 @@ def CribaErastostenes(n):
         #no cambio en primo = primo y viceversa
         if (primo[a] == True):
             for i in range(a*a, n+1, a):
-                primo[i] == False         
+                primo[i] = False         
         a += 1
