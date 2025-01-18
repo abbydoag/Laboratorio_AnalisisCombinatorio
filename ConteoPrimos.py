@@ -17,7 +17,7 @@ def criba_eratostenes(n):
     primo[0] = primo[1] = False  # 0 y 1 no son primos
     #menor primo posible
     a = 2
-    while (a*a < n):
+    while (a*a <= n):
         #no cambio en primo = primo y viceversa
         if (primo[a] == True):
             for i in range(a*a, n+1, a):
@@ -49,6 +49,17 @@ def inclusion_exclusion(n):
     #los nmeros que no estan en la union de multiplos son primos
     todos_numeros = set(range(2, n))
     primos = todos_numeros - union_conjuntos
+
+    #filtrar numeros incorrectos
+    primos = []
+    for x in todos_numeros - union_conjuntos:
+        es_primo = True
+        for p in numeros_primos:
+            if p != x and x % p == 0:
+                es_primo = False
+                break
+        if es_primo:
+            primos.append(x)
 
     return sorted(list(primos)), conjuntos
 
