@@ -76,5 +76,5 @@ for primo in conjuntos_multiples:
 
 print("\nLista de números primos menores que 100:")
 print(primos_menores_100)
-
-
+print("\nTotal numeros primos:")
+print(len(primos_menores_100))
